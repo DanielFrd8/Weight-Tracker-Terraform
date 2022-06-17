@@ -16,7 +16,7 @@ resource "azurerm_network_security_rule" "app_ssh" {
   access = "Allow"
   protocol = "Tcp"
   source_port_range = "*"
-  source_address_prefix = "10.100.102.37"
+  source_address_prefix = "VirtualNetwork"
   destination_port_range = "22"
   destination_address_prefix = "*"
   resource_group_name = azurerm_resource_group.weight_tracker_rg.name
